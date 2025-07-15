@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>📘 دوراتي المسجلة</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="nav-bar">
+    <a href="dashboard.html">لوحة التحكم</a> |
+    <a href="profile.html">تعديل الملف</a> |
+    <button onclick="logout()" style="float:left;">🚪 تسجيل الخروج</button>
+  </div>
+
+  <div class="dashboard-container">
+    <h1>📘 دوراتي المسجلة</h1>
+    <ul id="myCourses" class="course-list"></ul>
+  </div>
+
+  <script src="auth.js"></script>
+  <script>
+    window.onload = function () {
+      const courses = JSON.parse(localStorage.getItem("enrolledCourses")) || [];
+      const list = document.getElementById("myCourses");
+
+      if (courses.length === 0) {
+        list.innerHTML = "<li class='empty'>❗️ لم تسجل في أي دورة حتى الآن.</li>";
+      } else {
+        courses.forEach(course => {
+          const li = document.createElement("li");
+          li.className = "course-item";
+          li.innerHTML = `
+            <h3>${course.name}</h3>
+            <p>👨‍🏫 المدرب: ${course.instructor}</p>
+            <p>📅 تاريخ البدء: ${course.startDate}</p>
+          `;
+          list.appendChild(li);
+        });
+      }
+    };
+  </script>
+</body>
+</html>

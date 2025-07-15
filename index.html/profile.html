@@ -1,0 +1,36 @@
+<!--تعديل الملف الشخص-->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>تعديل الملف الشخصي</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="nav-bar">
+    <a href="dashboard.html">لوحة التحكم</a> |
+    <a href="my-courses.html">📘 دوراتي</a> |
+    <button onclick="logout()" style="float:left;">🚪 تسجيل الخروج</button>
+  </div>
+
+  <div class="form-container">
+    <h1>👤 تعديل الملف الشخصي</h1>
+    <form id="profileForm">
+      <label>اسم المستخدم:</label>
+      <input type="text" id="username" required />
+
+      <label>البريد الإلكتروني:</label>
+      <input type="email" id="email" required disabled />
+
+      <label>كلمة المرور الجديدة:</label>
+      <input type="password" id="password" />
+
+      <button type="submit">💾 حفظ التعديلات</button>
+    </form>
+    <p id="message"></p>
+  </div>
+
+  <script src="auth.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>

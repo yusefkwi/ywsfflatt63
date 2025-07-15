@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📝 اختبار الدورة</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="nav-bar">
+    <a href="index.html">الرئيسية</a> |
+    <a href="dashboard.html">لوحة التحكم</a> |
+    <a href="courses.html">الدورات</a> |
+    <a href="test.html">الاختبار</a> |
+    <a href="result.html">النتيجة</a>
+  </div>
+
+  <div class="test-container">
+    <h1>📝 اختبار الدورة</h1>
+
+    <form id="quiz-form" class="quiz-form">
+      <div class="question">
+        <p>1. ما هي لغة البرمجة المستخدمة لتطوير الواجهات؟</p>
+        <label><input type="radio" name="q1" value="0" /> Python</label><br>
+        <label><input type="radio" name="q1" value="1" /> JavaScript</label><br>
+        <label><input type="radio" name="q1" value="0" /> PHP</label>
+      </div>
+
+      <div class="question">
+        <p>2. ما وظيفة CSS؟</p>
+        <label><input type="radio" name="q2" value="1" /> تنسيق شكل الصفحة</label><br>
+        <label><input type="radio" name="q2" value="0" /> بناء قاعدة البيانات</label><br>
+        <label><input type="radio" name="q2" value="0" /> تنفيذ العمليات</label>
+      </div>
+
+      <div class="question">
+        <p>3. ما فائدة HTML؟</p>
+        <label><input type="radio" name="q3" value="1" /> بناء هيكل الصفحة</label><br>
+        <label><input type="radio" name="q3" value="0" /> تصميم الصور</label><br>
+        <label><input type="radio" name="q3" value="0" /> حماية الموقع</label>
+      </div>
+
+      <button type="button" onclick="submitQuiz()">✅ إرسال الإجابات</button>
+    </form>
+  </div>
+
+  <script src="test.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!--صفحة بعد تسجيل الدخول-->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تسجيل الدخول</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="nav-bar">
+    <a href="index.html">الرئيسية</a> |
+    <a href="register.html">إنشاء حساب</a>
+  </div>
+
+  <div class="form-container">
+    <h1>🔐 تسجيل الدخول</h1>
+    <form id="loginForm">
+      <label for="email">البريد الإلكتروني:</label>
+      <input type="email" id="email" required />
+
+      <label for="password">كلمة المرور:</label>
+      <input type="password" id="password" required />
+
+      <button type="submit">تسجيل الدخول</button>
+    </form>
+    <p id="loginMessage"></p>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

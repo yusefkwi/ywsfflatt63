@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📊 نتيجتك</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="nav-bar">
+    <a href="index.html">الرئيسية</a> |
+    <a href="dashboard.html">لوحة التحكم</a> |
+    <a href="courses.html">الدورات</a> |
+    <a href="test.html">الاختبار</a> |
+    <a href="result.html">النتيجة</a>
+  </div>
+
+  <div class="test-container">
+    <h1>📊 نتيجتك</h1>
+    <div id="result-box"></div>
+    <button onclick="window.location.href='test.html'">🔁 إعادة الاختبار</button>
+    <button onclick="window.location.href='dashboard.html'">🏠 العودة للوحة التحكم</button>
+    <button onclick="window.location.href='certificate.html'">🎓 عرض الشهادة</button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const score = localStorage.getItem("quizScore");
+      const total = localStorage.getItem("quizTotal");
+
+      const box = document.getElementById("result-box");
+      if (score !== null && total !== null) {
+        box.innerHTML = `درجتك: <strong>${score} / ${total}</strong><br>` +
+          (score == total ? "🎉 ممتاز! إجاباتك كلها صحيحة." : "💡 راجع الدرس وأعد المحاولة.");
+      } else {
+        box.innerHTML = "❌ لم يتم تقديم الاختبار.";
+      }
+    });
+  </script>
+</body>
+</html>
